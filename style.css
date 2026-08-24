@@ -1,0 +1,324 @@
+/* Variáveis de Estilo */
+:root {
+    --cor-principal: #4f46e5;
+    --cor-principal-hover: #4338ca;
+    --cor-fundo: #f8fafc;
+    --cor-cartao: #ffffff;
+    --cor-texto-principal: #0f172a;
+    --cor-texto-suave: #64748b;
+    --cor-curtir: #10b981;
+    --cor-excluir: #ef4444;
+    --cor-borda: #e2e8f0;
+    --raio-arredondado-lg: 16px;
+    --raio-arredondado-md: 8px;
+}
+
+/* Configurações Gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+}
+
+/* Barra de Navegação */
+.barra-navegacao {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.conteiner-navegacao {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-logo {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.titulo-marca {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--cor-texto-principal);
+}
+
+/* Banner Principal */
+.banner-principal {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.conteudo-banner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.conteudo-banner h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+}
+
+.conteudo-banner p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.05rem;
+}
+
+/* Estrutura Central */
+.conteiner-principal {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.cabecalho-feed {
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+}
+
+.cabecalho-feed h2 {
+    font-size: 1.3rem;
+    color: var(--cor-texto-principal);
+    margin: 0;
+}
+
+/* Grade de Postagens */
+.grade-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Cartão do Post */
+.cartao-post {
+    background-color: var(--cor-cartao);
+    border-radius: var(--raio-arredondado-lg);
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cartao-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.corpo-post {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cartao-post h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: var(--cor-texto-principal);
+}
+
+.cartao-post p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+/* Ações e Autor */
+.acoes-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--cor-borda);
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.interacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contador-curtidas {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+    font-weight: 600;
+}
+
+.autor-post {
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+    margin-top: 12px;
+    text-align: right;
+}
+
+/* Botões */
+.btn-criar-post {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-criar-post:hover {
+    background-color: var(--cor-principal-hover);
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: var(--raio-arredondado-md);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-curtir {
+    background-color: #f1f5f9;
+    color: var(--cor-texto-principal);
+}
+
+.btn-curtir.curtido {
+    background-color: var(--cor-curtir);
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #fef2f2;
+    color: var(--cor-excluir);
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--raio-arredondado-md);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.btn-excluir:hover {
+    background-color: var(--cor-excluir);
+    color: white;
+}
+
+/* Janela Modal */
+.janela-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.janela-modal.escondida {
+    display: none;
+}
+
+.conteudo-modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--raio-arredondado-lg);
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cabecalho-modal h2 {
+    margin: 0;
+}
+
+.btn-fechar-x {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--cor-texto-suave);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-texto-principal);
+}
+
+form input[type="text"], form textarea, form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-arredondado-md);
+    background-color: #f8fafc;
+}
+
+.botoes-formulario {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-salvar { background-color: var(--cor-principal); color: white; }
+.btn-cancelar { background-color: #e2e8f0; color: var(--cor-texto-principal); }
+
+
