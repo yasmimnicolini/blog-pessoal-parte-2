@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="barra-navegacao">
+        <div class="conteiner-navegacao">
+            <div class="marca">
+                <div class="icone-logo">✨</div>
+                <span class="titulo-marca">Blog Pessoal</span>
+            </div>
+            <button id="btn-abrir-modal" class="btn-criar-post">➕ Novo Post</button>
+        </div>
+    </header>
+
+    <section class="banner-principal">
+        <div class="conteudo-banner">
+            <h1>Pensamentos e Reflexões</h1>
+            <p>Um espaço dedicado a compartilhar ideias, experiências e descobertas do dia a dia.</p>
+        </div>
+    </section>
+
+    <main class="conteiner-principal">
+        <div class="cabecalho-feed">
+            <h2>📰 Publicações Recentes</h2>
+        </div>
+
+        <section id="grid-posts" class="grade-posts"></section>
+    </main>
+
+    <div id="modal-post" class="janela-modal escondida">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Nova Publicação</h2>
+                <button type="button" id="btn-fechar-modal-x" class="btn-fechar-x">&times;</button>
+            </div>
+            <form id="form-novo-post">
+                <label for="novo-titulo">Título do Post</label>
+                <input type="text" id="novo-titulo" placeholder="Ex: Minha nova jornada..." required>
+
+                <label for="novo-conteudo">Conteúdo</label>
+                <textarea id="novo-conteudo" rows="4" placeholder="Escreva sua história aqui..." required></textarea>
+
+                <label for="nova-imagem">Imagem de Capa</label>
+                <input type="file" id="nova-imagem" accept="image/*" required>
+
+                <div class="botoes-formulario">
+                    <button type="button" id="btn-fechar-modal" class="btn btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-salvar">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
